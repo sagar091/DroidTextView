@@ -16,6 +16,7 @@ import android.view.animation.AnimationUtils;
 
 public class MainActivity extends AppCompatActivity {
 
+
     private CollapsingToolbarLayout collapsingToolbarLayout;
 
     @Override
