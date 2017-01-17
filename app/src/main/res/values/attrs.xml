@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--PagerTabStrip-->
+    <declare-styleable name="DroidTextView">
+        <attr name="hlText" format="string" />
+        <attr name="hlTextColor" format="color" />
+        <attr name="hlBold" format="boolean" />
+        <attr name="hlUnderline" format="boolean" />
+        <attr name="endDots" format="integer" />
+        <attr name="bigLength" format="integer" />
+        <attr name="bigTimes" format="integer" />
+        <attr name="font" format="string" />
+        <attr name="typeSpeed" format="integer" />
+        <attr name="reveal" format="integer" />
+        <attr name="isBlink" format="boolean" />
+
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+        <attr name="pstsPaddingMiddle" format="boolean" />
+        <attr name="pstsTextStyle">
+            <flag name="normal" value="0x0" />
+            <flag name="bold" value="0x1" />
+            <flag name="italic" value="0x2" />
+        </attr>
+        <attr name="pstsTextSelectedStyle">
+            <flag name="normal" value="0x0" />
+            <flag name="bold" value="0x1" />
+            <flag name="italic" value="0x2" />
+        </attr>
+        <attr name="pstsTextAlpha" format="float" />
+        <attr name="pstsTextSelectedAlpha" format="float" />
+    </declare-styleable>
+</resources>

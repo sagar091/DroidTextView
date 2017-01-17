@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="196dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:expandedTitleGravity="center"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="196dp"
+                app:layout_collapseMode="parallax">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sc" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/image_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.droidbyme.droidtextview.DroidTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Surya Motors"
+                            android:textColor="#ffffff"
+                            android:textSize="36sp"
+                            android:visibility="gone"
+                            app:font="regular.ttf" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <com.droidbyme.droidtextview.DroidTextView
+                                android:id="@+id/rating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:text="4.5"
+                                android:textColor="#ffffff"
+                                android:textSize="18sp"
+                                app:font="regular.ttf" />
+
+                            <ImageView
+                                android:id="@+id/rBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/rating"
+                                android:src="@drawable/ic_action_grade"
+                                android:tint="#ffffff" />
+
+                            <com.droidbyme.droidtextview.DroidTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="16dp"
+                                android:layout_toRightOf="@+id/rBar"
+                                android:text="45 Reviews"
+                                android:textColor="#ffffff"
+                                android:textSize="18sp"
+                                app:font="regular.ttf" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <com.droidbyme.droidtextview.DroidTextView
+                        android:id="@+id/offerTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:drawableTint="#FFD700"
+                        android:drawableTop="@drawable/ic_action_bookmark"
+                        android:text="Offers"
+                        android:textColor="#FFD700"
+                        android:textSize="18sp"
+                        app:font="regular.ttf" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f1f1f1">
+
+            <LinearLayout
+                android:id="@+id/activity_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <com.droidbyme.droidtextview.DroidTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dealership: Ford"
+                            android:textColor="#4c4c4c"
+                            android:textSize="22sp"
+                            app:font="regular.ttf" />
+
+                        <com.droidbyme.droidtextview.DroidTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Expertise in quick service. Experiences mechanics hired for quick and perfect service."
+                            android:textColor="#4c4c4c"
+                            android:textSize="18sp"
+                            app:font="regular.ttf" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal">
+
+                            <com.droidbyme.droidtextview.DroidTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/type_bg"
+                                android:padding="8dp"
+                                android:text="Body Shop"
+                                android:textColor="#4c4c4c"
+                                android:textSize="16sp"
+                                app:font="regular.ttf" />
+
+                            <com.droidbyme.droidtextview.DroidTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:background="@drawable/type_bg"
+                                android:padding="8dp"
+                                android:text="Pick Drop"
+                                android:textColor="#4c4c4c"
+                                android:textSize="16sp"
+                                app:font="regular.ttf" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <com.droidbyme.droidtextview.DroidTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="C/45, Shayamal Complex, Near MacDonald, Fatehgunj, Vadodara"
+                            android:textColor="#4c4c4c"
+                            android:textSize="22sp"
+                            app:font="regular.ttf" />
+
+                        <com.droidbyme.droidtextview.DroidTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="shikha@gmail.com"
+                            android:textColor="#0000FF"
+                            android:textSize="18sp"
+                            app:font="regular.ttf" />
+
+                        <com.droidbyme.droidtextview.DroidTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="www.ford.com"
+                            android:textColor="#0000FF"
+                            android:textSize="18sp"
+                            app:font="regular.ttf" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <com.droidbyme.droidtextview.DroidTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="4dp"
+                            android:drawableTop="@drawable/ic_call"
+                            android:gravity="center"
+                            android:text="Call"
+                            android:textColor="#4c4c4c"
+                            android:textSize="18sp"
+                            app:font="regular.ttf" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="24dp"
+                            android:background="#4c4c4c" />
+
+                        <com.droidbyme.droidtextview.DroidTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="4dp"
+                            android:drawableTop="@drawable/ic_star"
+                            android:gravity="center"
+                            android:text="Add Review"
+                            android:textColor="#4c4c4c"
+                            android:textSize="18sp"
+                            app:font="regular.ttf" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="24dp"
+                            android:background="#4c4c4c" />
+
+                        <com.droidbyme.droidtextview.DroidTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="4dp"
+                            android:drawableTop="@drawable/ic_location"
+                            android:gravity="center"
+                            android:text="Location"
+                            android:textColor="#4c4c4c"
+                            android:textSize="18sp"
+                            app:font="regular.ttf" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <com.droidbyme.droidtextview.DroidTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dealership: Ford"
+                            android:textColor="#4c4c4c"
+                            android:textSize="22sp"
+                            app:font="regular.ttf" />
+
+                        <com.droidbyme.droidtextview.DroidTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Expertise in quick service. Experiences mechanics hired for quick and perfect service."
+                            android:textColor="#4c4c4c"
+                            android:textSize="18sp"
+                            app:font="regular.ttf" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal">
+
+                            <com.droidbyme.droidtextview.DroidTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/type_bg"
+                                android:padding="8dp"
+                                android:text="Body Shop"
+                                android:textColor="#4c4c4c"
+                                android:textSize="16sp"
+                                app:font="regular.ttf" />
+
+                            <com.droidbyme.droidtextview.DroidTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:background="@drawable/type_bg"
+                                android:padding="8dp"
+                                android:text="Pick Drop"
+                                android:textColor="#4c4c4c"
+                                android:textSize="16sp"
+                                app:font="regular.ttf" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <com.droidbyme.droidtextview.DroidTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="C/45, Shayamal Complex, Near MacDonald, Fatehgunj, Vadodara"
+                            android:textColor="#4c4c4c"
+                            android:textSize="22sp"
+                            app:font="regular.ttf" />
+
+                        <com.droidbyme.droidtextview.DroidTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="shikha@gmail.com"
+                            android:textColor="#0000FF"
+                            android:textSize="18sp"
+                            app:font="regular.ttf" />
+
+                        <com.droidbyme.droidtextview.DroidTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="www.ford.com"
+                            android:textColor="#0000FF"
+                            android:textSize="18sp"
+                            app:font="regular.ttf" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <com.droidbyme.droidtextview.DroidTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="4dp"
+                            android:drawableTop="@drawable/ic_call"
+                            android:gravity="center"
+                            android:text="Call"
+                            android:textColor="#4c4c4c"
+                            android:textSize="18sp"
+                            app:font="regular.ttf" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="24dp"
+                            android:background="#4c4c4c" />
+
+                        <com.droidbyme.droidtextview.DroidTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="4dp"
+                            android:drawableTop="@drawable/ic_star"
+                            android:gravity="center"
+                            android:text="Add Review"
+                            android:textColor="#4c4c4c"
+                            android:textSize="18sp"
+                            app:font="regular.ttf" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="24dp"
+                            android:background="#4c4c4c" />
+
+                        <com.droidbyme.droidtextview.DroidTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="4dp"
+                            android:drawableTop="@drawable/ic_location"
+                            android:gravity="center"
+                            android:text="Location"
+                            android:textColor="#4c4c4c"
+                            android:textSize="18sp"
+                            app:font="regular.ttf" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
